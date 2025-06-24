@@ -2,7 +2,7 @@
   <img src="https://i.ibb.co/W4BbX6FL/Screenshot-from-2025-06-24-12-50-29.png" alt="Project score">
 </div>
 
-# philosophers
+# minishell
   
 
 ## Usage
