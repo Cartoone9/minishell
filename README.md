@@ -12,6 +12,8 @@ To compile the program, navigate to the project root and run:
 make
 ```
 
+![Minishell compiling](https://i.ibb.co/Xkzj1bGC/compile-minishell.gif)
+
 Then you can start the program like this:
 ```bash
 ./minishell
