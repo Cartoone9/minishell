@@ -1,0 +1,4 @@
+.built_makefile
+.counter_makefile
+*.o
+minishell
