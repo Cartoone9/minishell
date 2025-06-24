@@ -7,16 +7,16 @@
 
 ## Usage
 
-To compile the program, navigate to the project root and run:
+To compile the program, navigate to the project root and run:  
 ```bash
 make
 # or
 make bonus
 ```
 
-![Minishell compiling](https://i.ibb.co/Xkzj1bGC/compile-minishell.gif)
+![Minishell compiling](https://i.ibb.co/Xkzj1bGC/compile-minishell.gif)  
 
-Then you can start the program like this:
+Then you can start the program like this:  
 ```bash
 ./minishell
 ```
@@ -30,6 +30,10 @@ All projects from my 42 cursus are preserved in their state immediately followin
 
 ## Known Issues & Fix Suggestions
 
+
+## Credits
+
+This project was developed in collaboration with another student, who contributed to the implementation of built-in commands, signal handling, and provided valuable debugging support.
 
 ## License
 
