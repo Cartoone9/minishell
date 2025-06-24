@@ -24,7 +24,11 @@ Then you can start the program like this:
 ./minishell
 ```
 
-## Examples
+## Example
+
+![Minishell demo](https://i.ibb.co/NnKNWSzY/example-minishell.gif)  
+
+## Features
 
 
 ## Note on Project State
