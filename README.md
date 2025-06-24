@@ -10,6 +10,8 @@
 To compile the program, navigate to the project root and run:
 ```bash
 make
+# or
+make bonus
 ```
 
 ![Minishell compiling](https://i.ibb.co/Xkzj1bGC/compile-minishell.gif)
