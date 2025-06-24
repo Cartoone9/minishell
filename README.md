@@ -26,7 +26,6 @@ Then you can start the program like this:
 
 ## Example
 
-![Minishell demo](https://i.ibb.co/NnKNWSzY/example-minishell.gif)  
 ![Minishell demo](https://github.com/user-attachments/assets/56ccdaf8-9669-44b4-a6bc-3904160a811a)
 
 ## Features
