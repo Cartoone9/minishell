@@ -17,7 +17,7 @@ make
 make bonus
 ```
 
-![Minishell compiling](https://i.ibb.co/Xkzj1bGC/compile-minishell.gif)  
+![Minishell compiling](https://github.com/user-attachments/assets/e0f29a5f-1b22-4f1c-b402-055fd333b20f)  
 
 Then you can start the program like this:  
 ```bash
