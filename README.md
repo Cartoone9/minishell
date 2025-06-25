@@ -67,9 +67,6 @@ In the following examples I will try to present most of the features supported, 
 
 ### Exit:  
 ![minishell_exit_1](https://github.com/user-attachments/assets/bc9f4ef4-0d0b-4d68-a2e1-a47761480ba9)  
-![minishell_exit_2](https://github.com/user-attachments/assets/0dbe5a66-16a5-4b9a-a7b2-71cdbbaaa92c)  
-![minishell_exit_3](https://github.com/user-attachments/assets/a5ba2011-d1cd-412c-b567-f39cc49356f0)  
-![minishell_exit_4](https://github.com/user-attachments/assets/bed61fa2-1198-4640-92db-f213adf6d224)  
 ![minishell_exit_5](https://github.com/user-attachments/assets/129bfcd7-7285-4b91-9681-f1c0f3093497)  
 ![minishell_exit_6](https://github.com/user-attachments/assets/8034b6cb-c38a-477d-84d7-c5d6deb07de8)  
 ![minishell_exit_7](https://github.com/user-attachments/assets/33eb0e65-67fe-4861-b0df-eebb560d357b)  
