@@ -41,6 +41,9 @@ All projects from my 42 cursus are preserved in their state immediately followin
 
 ## Known Issues & Fix Suggestions
 
+WIP:
+- Ctrl+C in a heredoc doesn't line return
+- Kill a vim session inside minishell, from another terminal will make the prompt messy
 
 ## Credits
 
