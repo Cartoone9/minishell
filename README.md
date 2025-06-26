@@ -36,7 +36,7 @@ The minishell project is covering a lot of ground, and the best way to check all
 ### Basic:  
 Here you can see a basic `echo` command with a redirection to a file `output`.  
 ![minishell_basic](https://github.com/user-attachments/assets/df54efc1-0609-4753-a9d2-1e9185492a45)  
-Continuing, we can add quotes that will force a literal interpretation of the special characters like `|`.  
+Continuing, we can add quotes that will force a literal interpretation of the special characters like `|` or `>`.  
 ![minishell_double_quote](https://github.com/user-attachments/assets/5fce475a-d2ae-4047-b4a6-df76d0b2e97c)  
 
 ### Empty:  
@@ -75,15 +75,23 @@ Then depending on the quotes used, the expansion will vary, either splitting the
 ![minishell_echo_export](https://github.com/user-attachments/assets/1d08b70b-bff1-43f6-ba93-d7319d7c4653)  
 
 ### Cd:  
+The following examples will showcase the `cd` behavior.
 ![minishell_cd_1](https://github.com/user-attachments/assets/8522052a-81f4-4ee9-af47-aa1e8a6f0335)  
+Here we can see it fail on a locked directory, and a missing directory.
 ![minishell_cd_2](https://github.com/user-attachments/assets/9280b27f-18f5-4339-95c8-b151ccd8cbb3)  
-![minishell_cd_dot](https://github.com/user-attachments/assets/0827dff4-8a5b-4f30-8a77-97101020eafc)  
+The following image is showing the `cd` command used with `..` and `.` in accordance to the subject.  
+We use `pwd` to check that we are in the correct directory, even tho the current working directory is updated directly in the prompt.  
 ![minishell_cd_dot_2](https://github.com/user-attachments/assets/dea4832c-b444-4d11-820f-8e5cfec30227)  
 
 ### Exit:  
+If a value contained in a `LONG LONG` is passed to the `exit` command, it will be used as the returned value.  
 ![minishell_exit_1](https://github.com/user-attachments/assets/bc9f4ef4-0d0b-4d68-a2e1-a47761480ba9)  
+That only works when using a numeric value.
 ![minishell_exit_5](https://github.com/user-attachments/assets/129bfcd7-7285-4b91-9681-f1c0f3093497)  
+And with a single argument.
 ![minishell_exit_6](https://github.com/user-attachments/assets/8034b6cb-c38a-477d-84d7-c5d6deb07de8)  
+If no value is passed to the `exit` command, then the last command status is returned.  
+Here we test this by first using `Ctrl + C` to set the status to 130, then we exit. The returned value is indeed 130.  
 ![minishell_exit_7](https://github.com/user-attachments/assets/33eb0e65-67fe-4861-b0df-eebb560d357b)  
 
 ### Errors:  
