@@ -1,4 +1,4 @@
-   <div align="center">
+<div align="center">
   <img src="https://i.ibb.co/W4BbX6FL/Screenshot-from-2025-06-24-12-50-29.png" alt="Project score">
 </div>
 
@@ -55,11 +55,13 @@ Then you can start the program like this:
 In the following examples I will try to present most of the features supported, but not everything is shown here.  
 The minishell project is covering a lot of ground, and the best way to check all of its features would be to use the program directly.  
 
-### Basic:  
+<details>
+<summary><strong>Basic</strong></summary>
 Here you can see a basic `echo` command with a redirection to a file `output`.  
 ![minishell_basic](https://github.com/user-attachments/assets/df54efc1-0609-4753-a9d2-1e9185492a45)  
 Continuing, we can add quotes that will force a literal interpretation of the special characters like `|` or `>`.  
 ![minishell_double_quote](https://github.com/user-attachments/assets/5fce475a-d2ae-4047-b4a6-df76d0b2e97c)  
+</details>
 
 ### Empty:  
 This example is to test empty commands. A simple line return, nothing quoted, and space quoted.  
