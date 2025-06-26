@@ -76,8 +76,7 @@ If no command is used, the file is emptied just like `Bash` would do.
 
 ### Heredocs:  
 Here we'll see the `heredocs`. You can combine the `heredocs` just like you could for the simple redirections previously seen.  
-![minishell_heredoc](https://github.com/user-attachments/assets/4257c447-f46a-44ef-8dda-7662f9a6d49a)  
-If a `pipe` is ending the command live, first we resolve the `heredocs`, then the program will show the appropriate prompt for the remaining `pipe`.  
+If a `pipe` is ending the command line, we start by resolving the `heredocs`, then the program will show the appropriate prompt for the remaining `pipe`.  
 ![minishell_heredoc_pipe](https://github.com/user-attachments/assets/ddd9b0c5-cc7f-404e-afb8-ba112def9266)  
 
 ### Pipes:  
