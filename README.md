@@ -61,12 +61,12 @@ If a `pipe` is ending the command live, first we resolve the `heredocs`, then th
 ### Pipes:  
 First we can see a simple command including `pipes`.  
 ![minishell_pipe_1](https://github.com/user-attachments/assets/ebc7c9cb-6a78-465b-a41f-f7acaa22ed9a)  
-Here we can see the behavior seen before with the `heredocs`. As long as the last command is ending with a `pipe`, a new prompt will open.
-Once a command not ending with a `pipe` is entered, the multiples commands are merged into a single one.
+Here we can see the behavior seen before with the `heredocs`. As long as the last command is ending with a `pipe`, a new prompt will open.  
+Once a command not ending with a `pipe` is entered, the multiples commands are merged into a single one.  
 ![minishell_pipe_end](https://github.com/user-attachments/assets/dcf19219-a10f-4e70-95eb-9868fce021dd)  
 
 ### Echo:  
-This first example will show the basic behavior of `echo` when used with multiple quotes mixed.
+This first example will show the basic behavior of `echo` when used with multiple quotes mixed.  
 ![minishell_echo_1](https://github.com/user-attachments/assets/109d88ec-1cbc-4a6b-b7ab-8a8ce99b278b)  
 The `echo` builtin is also supporting the use of the `n` flag.  
 ![minishell_echo_n](https://github.com/user-attachments/assets/f17c1141-aec7-40c5-8115-3b36eee6dc95)  
@@ -75,9 +75,9 @@ Then depending on the quotes used, the expansion will vary, either splitting the
 ![minishell_echo_export](https://github.com/user-attachments/assets/1d08b70b-bff1-43f6-ba93-d7319d7c4653)  
 
 ### Cd:  
-The following examples will showcase the `cd` behavior.
+The following examples will showcase the `cd` behavior.  
 ![minishell_cd_1](https://github.com/user-attachments/assets/8522052a-81f4-4ee9-af47-aa1e8a6f0335)  
-Here we can see it fail on a locked directory, and a missing directory.
+Here we can see it fail on a locked directory, and a missing directory.  
 ![minishell_cd_2](https://github.com/user-attachments/assets/9280b27f-18f5-4339-95c8-b151ccd8cbb3)  
 The following image is showing the `cd` command used with `..` and `.` in accordance to the subject.  
 We use `pwd` to check that we are in the correct directory, even tho the current working directory is updated directly in the prompt.  
@@ -86,9 +86,9 @@ We use `pwd` to check that we are in the correct directory, even tho the current
 ### Exit:  
 If a value contained in a `LONG LONG` is passed to the `exit` command, it will be used as the returned value.  
 ![minishell_exit_1](https://github.com/user-attachments/assets/bc9f4ef4-0d0b-4d68-a2e1-a47761480ba9)  
-That only works when using a numeric value.
+That only works when using a numeric value.  
 ![minishell_exit_5](https://github.com/user-attachments/assets/129bfcd7-7285-4b91-9681-f1c0f3093497)  
-And with a single argument.
+And with a single argument.  
 ![minishell_exit_6](https://github.com/user-attachments/assets/8034b6cb-c38a-477d-84d7-c5d6deb07de8)  
 If no value is passed to the `exit` command, then the last command status is returned.  
 Here we test this by first using `Ctrl + C` to set the status to 130, then we exit. The returned value is indeed 130.  
