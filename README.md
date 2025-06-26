@@ -31,33 +31,48 @@ Then you can start the program like this:
 ## Features
 
 In the following examples I will try to present most of the features supported, but not everything is shown here.  
+The minishell project is covering a lot of ground, and the best way to check all of its features would be to use the program directly.  
 
 ### Basic:  
+Here you can see a basic `echo` command with a redirection to a file `output`.  
 ![minishell_basic](https://github.com/user-attachments/assets/df54efc1-0609-4753-a9d2-1e9185492a45)  
-![minishell_return_value](https://github.com/user-attachments/assets/a5463496-940b-4609-a2c3-a33e3f521b2b)  
+Continuing, we can add quotes that will force a literal interpretation of the special characters like `|`.  
 ![minishell_double_quote](https://github.com/user-attachments/assets/5fce475a-d2ae-4047-b4a6-df76d0b2e97c)  
 
 ### Empty:  
+This example is to test empty commands. A simple line return, nothing quoted, and space quoted.  
 ![minishell_empty](https://github.com/user-attachments/assets/ffb13913-a55f-4b87-845a-c43b83397dad)  
 
 ### Redirections:  
+The next example is showing support of the multiple input redirections in random order, before and after the main command.  
+As you can see, only last file is used for the redirection while the previous files are created if they don't exist.  
 ![minishell_redir](https://github.com/user-attachments/assets/e93ff3d6-a88f-4fb0-8271-b037b4379b56)  
+Same for multiple output redirections. The redirections work without spaces or with quotes.  
 ![minishell_redir_2](https://github.com/user-attachments/assets/7f7b3178-2aaa-43a3-807c-691c8dc760eb)  
+If no command is used, the file is emptied just like `Bash` would do.  
 ![minishell_redir_3](https://github.com/user-attachments/assets/02b314c2-539b-492b-9909-ec171540aba3)  
 
 ### Heredocs:  
+Here we'll see the `heredocs`. You can combine the `heredocs` just like you could for the simple redirections previously seen.  
 ![minishell_heredoc](https://github.com/user-attachments/assets/4257c447-f46a-44ef-8dda-7662f9a6d49a)  
+If a `pipe` is ending the command live, first we resolve the `heredocs`, then the program will show the appropriate prompt for the remaining `pipe`.  
 ![minishell_heredoc_pipe](https://github.com/user-attachments/assets/ddd9b0c5-cc7f-404e-afb8-ba112def9266)  
 
 ### Pipes:  
+First we can see a simple command including `pipes`.  
 ![minishell_pipe_1](https://github.com/user-attachments/assets/ebc7c9cb-6a78-465b-a41f-f7acaa22ed9a)  
-![minishell_pipe_2](https://github.com/user-attachments/assets/25f270c8-6932-478a-a39c-1f4430907981)  
+Here we can see the behavior seen before with the `heredocs`. As long as the last command is ending with a `pipe`, a new prompt will open.
+Once a command not ending with a `pipe` is entered, the multiples commands are merged into a single one.
 ![minishell_pipe_end](https://github.com/user-attachments/assets/dcf19219-a10f-4e70-95eb-9868fce021dd)  
 
 ### Echo:  
+This first example will show the basic behavior of `echo` when used with multiple quotes mixed.
 ![minishell_echo_1](https://github.com/user-attachments/assets/109d88ec-1cbc-4a6b-b7ab-8a8ce99b278b)  
-![minishell_echo_export](https://github.com/user-attachments/assets/1d08b70b-bff1-43f6-ba93-d7319d7c4653)  
+The `echo` builtin is also supporting the use of the `n` flag.  
 ![minishell_echo_n](https://github.com/user-attachments/assets/f17c1141-aec7-40c5-8115-3b36eee6dc95)  
+We can go a little further by exporting a variable containing spaces in our environment.  
+Then depending on the quotes used, the expansion will vary, either splitting the variable or not.  
+![minishell_echo_export](https://github.com/user-attachments/assets/1d08b70b-bff1-43f6-ba93-d7319d7c4653)  
 
 ### Cd:  
 ![minishell_cd_1](https://github.com/user-attachments/assets/8522052a-81f4-4ee9-af47-aa1e8a6f0335)  
@@ -72,13 +87,20 @@ In the following examples I will try to present most of the features supported, 
 ![minishell_exit_7](https://github.com/user-attachments/assets/33eb0e65-67fe-4861-b0df-eebb560d357b)  
 
 ### Errors:  
+Here I used the `ls` command to show the possible file errors and the ways the program is dealing with them.  
+As you can see, the correct error messages and returned values are used, even when using a redirection or not.  
 ![minishell_full_perm](https://github.com/user-attachments/assets/f6ca1552-2c66-40fe-87d5-563120604dc8)  
 
 ### Path:  
+This example is used to show that removing the `PATH` will stop relative commands from executing, but absolute command should still work.  
+Adding a `PATH` again should allow for the execution of the commands found in that `PATH`.  
 ![minishell_path](https://github.com/user-attachments/assets/bc039d91-7081-4a10-adff-116ac43fb208)  
 
 ### Wildcards:  
+Finally we can see the wildcard support in the following examples. First we check that we can get all the files expanded.  
+Then only the folders, only the hidden files, only the hidden folders, only the hidden folders containing `it` at the end, and finally only the hidden folders containing `i` followed by a `t` at the end.  
 ![minishell_wildcard](https://github.com/user-attachments/assets/ebbac2d3-7fc8-4a41-bbbc-63c911c15245)  
+We also can check the wildcard behavior when used with redirections, or quotes.
 ![minishell_wildcard_2](https://github.com/user-attachments/assets/0dbd7a4e-681c-47ac-b47c-b4c2eb3a8032)  
 
 ## Note on Project State
