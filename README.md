@@ -63,18 +63,24 @@ The minishell project is covering a lot of ground, and the best way to check all
   <img src="https://github.com/user-attachments/assets/5fce475a-d2ae-4047-b4a6-df76d0b2e97c" alt="minishell_double_quote" />
 </details>
 
-### Empty:  
-This example is to test empty commands. A simple line return, nothing quoted, and space quoted.  
-![minishell_empty](https://github.com/user-attachments/assets/ffb13913-a55f-4b87-845a-c43b83397dad)  
+<details>
+  <summary><strong>Empty</strong></summary>
+  <p>This example is to test empty commands. A simple line return, nothing quoted, and space quoted.</p>
+  <img src="https://github.com/user-attachments/assets/ffb13913-a55f-4b87-845a-c43b83397dad" alt="minishell_empty" />
+</details>
 
-### Redirections:  
-The next example is showing support of the multiple input redirections in random order, before and after the main command.  
-As you can see, only last file is used for the redirection while the previous files are created if they don't exist.  
-![minishell_redir](https://github.com/user-attachments/assets/e93ff3d6-a88f-4fb0-8271-b037b4379b56)  
-Same for multiple output redirections. The redirections work without spaces or with quotes.  
-![minishell_redir_2](https://github.com/user-attachments/assets/7f7b3178-2aaa-43a3-807c-691c8dc760eb)  
-If no command is used, the file is emptied just like `Bash` would do.  
-![minishell_redir_3](https://github.com/user-attachments/assets/02b314c2-539b-492b-9909-ec171540aba3)  
+<details>
+  <summary><strong>Redirections</strong></summary>
+  <p>The next example is showing support of the multiple input redirections in random order, before and after the main command.<br>
+  As you can see, only the last file is used for the redirection while the previous files are created if they don't exist.</p>
+  <img src="https://github.com/user-attachments/assets/e93ff3d6-a88f-4fb0-8271-b037b4379b56" alt="minishell_redir" />
+
+  <p>Same for multiple output redirections. The redirections work without spaces or with quotes.</p>
+  <img src="https://github.com/user-attachments/assets/7f7b3178-2aaa-43a3-807c-691c8dc760eb" alt="minishell_redir_2" />
+
+  <p>If no command is used, the file is emptied just like <code>Bash</code> would do.</p>
+  <img src="https://github.com/user-attachments/assets/02b314c2-539b-492b-9909-ec171540aba3" alt="minishell_redir_3" />
+</details>
 
 ### Heredocs:  
 Here we'll see the `heredocs`. You can combine the `heredocs` just like you could for the simple redirections previously seen.  
