@@ -82,63 +82,88 @@ The minishell project is covering a lot of ground, and the best way to check all
   <img src="https://github.com/user-attachments/assets/02b314c2-539b-492b-9909-ec171540aba3" alt="minishell_redir_3" />
 </details>
 
-### Heredocs:  
-Here we'll see the `heredocs`. You can combine the `heredocs` just like you could for the simple redirections previously seen.  
-If a `pipe` is ending the command line, we start by resolving the `heredocs`, then the program will show the appropriate prompt for the remaining `pipe`.  
-![minishell_heredoc_pipe](https://github.com/user-attachments/assets/ddd9b0c5-cc7f-404e-afb8-ba112def9266)  
+<details>
+  <summary><strong>Heredocs</strong></summary>
+  <p>Here we'll see the <code>heredocs</code>. You can combine the <code>heredocs</code> just like you could for the simple redirections previously seen.<br>
+  If a <code>pipe</code> is ending the command line, we start by resolving the <code>heredocs</code>, then the program will show the appropriate prompt for the remaining <code>pipe</code>.</p>
+  <img src="https://github.com/user-attachments/assets/ddd9b0c5-cc7f-404e-afb8-ba112def9266" alt="minishell_heredoc_pipe" />
+</details>
 
-### Pipes:  
-First we can see a simple command including `pipes`.  
-![minishell_pipe_1](https://github.com/user-attachments/assets/ebc7c9cb-6a78-465b-a41f-f7acaa22ed9a)  
-Here we can see the behavior seen before with the `heredocs`. As long as the last command is ending with a `pipe`, a new prompt will open.  
-Once a command not ending with a `pipe` is entered, the multiples commands are merged into a single one.  
-![minishell_pipe_end](https://github.com/user-attachments/assets/dcf19219-a10f-4e70-95eb-9868fce021dd)  
+<details>
+  <summary><strong>Pipes</strong></summary>
+  <p>First we can see a simple command including <code>pipes</code>.</p>
+  <img src="https://github.com/user-attachments/assets/ebc7c9cb-6a78-465b-a41f-f7acaa22ed9a" alt="minishell_pipe_1" />
 
-### Echo:  
-This first example will show the basic behavior of `echo` when used with multiple quotes mixed.  
-![minishell_echo_1](https://github.com/user-attachments/assets/109d88ec-1cbc-4a6b-b7ab-8a8ce99b278b)  
-The `echo` builtin is also supporting the use of the `n` flag.  
-![minishell_echo_n](https://github.com/user-attachments/assets/f17c1141-aec7-40c5-8115-3b36eee6dc95)  
-We can go a little further by exporting a variable containing spaces in our environment.  
-Then depending on the quotes used, the expansion will vary, either splitting the variable or not.  
-![minishell_echo_export](https://github.com/user-attachments/assets/1d08b70b-bff1-43f6-ba93-d7319d7c4653)  
+  <p>Here we can see the behavior seen before with the <code>heredocs</code>. As long as the last command is ending with a <code>pipe</code>, a new prompt will open.<br>
+  Once a command not ending with a <code>pipe</code> is entered, the multiple commands are merged into a single one.</p>
+  <img src="https://github.com/user-attachments/assets/dcf19219-a10f-4e70-95eb-9868fce021dd" alt="minishell_pipe_end" />
+</details>
 
-### Cd:  
-The following examples will showcase the `cd` behavior.  
-![minishell_cd_1](https://github.com/user-attachments/assets/8522052a-81f4-4ee9-af47-aa1e8a6f0335)  
-Here we can see it fail on a locked directory, and a missing directory.  
-![minishell_cd_2](https://github.com/user-attachments/assets/9280b27f-18f5-4339-95c8-b151ccd8cbb3)  
-The following image is showing the `cd` command used with `..` and `.` in accordance to the subject.  
-We use `pwd` to check that we are in the correct directory, even tho the current working directory is updated directly in the prompt.  
-![minishell_cd_dot_2](https://github.com/user-attachments/assets/dea4832c-b444-4d11-820f-8e5cfec30227)  
+<details>
+  <summary><strong>Echo</strong></summary>
+  <p>This first example will show the basic behavior of <code>echo</code> when used with multiple quotes mixed.</p>
+  <img src="https://github.com/user-attachments/assets/109d88ec-1cbc-4a6b-b7ab-8a8ce99b278b" alt="minishell_echo_1" />
 
-### Exit:  
-If a value contained in a `LONG LONG` is passed to the `exit` command, it will be used as the returned value.  
-![minishell_exit_1](https://github.com/user-attachments/assets/bc9f4ef4-0d0b-4d68-a2e1-a47761480ba9)  
-That only works when using a numeric value.  
-![minishell_exit_5](https://github.com/user-attachments/assets/129bfcd7-7285-4b91-9681-f1c0f3093497)  
-And with a single argument.  
-![minishell_exit_6](https://github.com/user-attachments/assets/8034b6cb-c38a-477d-84d7-c5d6deb07de8)  
-If no value is passed to the `exit` command, then the last command status is returned.  
-Here we test this by first using `Ctrl + C` to set the status to 130, then we exit. The returned value is indeed 130.  
-![minishell_exit_7](https://github.com/user-attachments/assets/33eb0e65-67fe-4861-b0df-eebb560d357b)  
+  <p>The <code>echo</code> builtin is also supporting the use of the <code>-n</code> flag.</p>
+  <img src="https://github.com/user-attachments/assets/f17c1141-aec7-40c5-8115-3b36eee6dc95" alt="minishell_echo_n" />
 
-### Errors:  
-Here I used the `ls` command to show the possible file errors and the ways the program is dealing with them.  
-As you can see, the correct error messages and returned values are used, even when using a redirection or not.  
-![minishell_full_perm](https://github.com/user-attachments/assets/f6ca1552-2c66-40fe-87d5-563120604dc8)  
+  <p>We can go a little further by exporting a variable containing spaces in our environment.<br>
+  Then depending on the quotes used, the expansion will vary, either splitting the variable or not.</p>
+  <img src="https://github.com/user-attachments/assets/1d08b70b-bff1-43f6-ba93-d7319d7c4653" alt="minishell_echo_export" />
+</details>
 
-### Path:  
-This example is used to show that removing the `PATH` will stop relative commands from executing, but absolute command should still work.  
-Adding a `PATH` again should allow for the execution of the commands found in that `PATH`.  
-![minishell_path](https://github.com/user-attachments/assets/bc039d91-7081-4a10-adff-116ac43fb208)  
+<details>
+  <summary><strong>Cd</strong></summary>
+  <p>The following examples will showcase the <code>cd</code> behavior.</p>
+  <img src="https://github.com/user-attachments/assets/8522052a-81f4-4ee9-af47-aa1e8a6f0335" alt="minishell_cd_1" />
 
-### Wildcards:  
-Finally we can see the wildcard support in the following examples. First we check that we can get all the files expanded.  
-Then only the folders, only the hidden files, only the hidden folders, only the hidden folders containing `it` at the end, and finally only the hidden folders containing `i` followed by a `t` at the end.  
-![minishell_wildcard](https://github.com/user-attachments/assets/ebbac2d3-7fc8-4a41-bbbc-63c911c15245)  
-We also can check the wildcard behavior when used with redirections, or quotes.
-![minishell_wildcard_2](https://github.com/user-attachments/assets/0dbd7a4e-681c-47ac-b47c-b4c2eb3a8032)  
+  <p>Here we can see it fail on a locked directory, and a missing directory.</p>
+  <img src="https://github.com/user-attachments/assets/9280b27f-18f5-4339-95c8-b151ccd8cbb3" alt="minishell_cd_2" />
+
+  <p>The following image is showing the <code>cd</code> command used with <code>..</code> and <code>.</code> in accordance to the subject.<br>
+  We use <code>pwd</code> to check that we are in the correct directory, even though the current working directory is updated directly in the prompt.</p>
+  <img src="https://github.com/user-attachments/assets/dea4832c-b444-4d11-820f-8e5cfec30227" alt="minishell_cd_dot_2" />
+</details>
+
+<details>
+  <summary><strong>Exit</strong></summary>
+  <p>If a value contained in a <code>long long</code> is passed to the <code>exit</code> command, it will be used as the returned value.</p>
+  <img src="https://github.com/user-attachments/assets/bc9f4ef4-0d0b-4d68-a2e1-a47761480ba9" alt="minishell_exit_1" />
+
+  <p>That only works when using a numeric value.</p>
+  <img src="https://github.com/user-attachments/assets/129bfcd7-7285-4b91-9681-f1c0f3093497" alt="minishell_exit_5" />
+
+  <p>And with a single argument.</p>
+  <img src="https://github.com/user-attachments/assets/8034b6cb-c38a-477d-84d7-c5d6deb07de8" alt="minishell_exit_6" />
+
+  <p>If no value is passed to the <code>exit</code> command, then the last command status is returned.<br>
+  Here we test this by first using <code>ctrl + c</code> to set the status to 130, then we exit. The returned value is indeed 130.</p>
+  <img src="https://github.com/user-attachments/assets/33eb0e65-67fe-4861-b0df-eebb560d357b" alt="minishell_exit_7" />
+</details>
+
+<details>
+  <summary><strong>Errors</strong></summary>
+  <p>Here I used the <code>ls</code> command to show the possible file errors and the ways the program is dealing with them.<br>
+  As you can see, the correct error messages and returned values are used, even when using a redirection or not.</p>
+  <img src="https://github.com/user-attachments/assets/f6ca1552-2c66-40fe-87d5-563120604dc8" alt="minishell_full_perm" />
+</details>
+
+<details>
+  <summary><strong>Path</strong></summary>
+  <p>This example is used to show that removing the <code>PATH</code> will stop relative commands from executing, but absolute commands should still work.<br>
+  Adding a <code>PATH</code> again should allow for the execution of the commands found in that <code>PATH</code>.</p>
+  <img src="https://github.com/user-attachments/assets/bc039d91-7081-4a10-adff-116ac43fb208" alt="minishell_path" />
+</details>
+
+<details>
+  <summary><strong>Wildcards</strong></summary>
+  <p>Finally we can see the wildcard support in the following examples. First we check that we can get all the files expanded.<br>
+  Then only the folders, only the hidden files, only the hidden folders, only the hidden folders containing <code>it</code> at the end, and finally only the hidden folders containing <code>i</code> followed by a <code>t</code> at the end.</p>
+  <img src="https://github.com/user-attachments/assets/ebbac2d3-7fc8-4a41-bbbc-63c911c15245" alt="minishell_wildcard" />
+
+  <p>We also can check the wildcard behavior when used with redirections, or quotes.</p>
+  <img src="https://github.com/user-attachments/assets/0dbd7a4e-681c-47ac-b47c-b4c2eb3a8032" alt="minishell_wildcard_2" />
+</details>
 
 ## Note on Project State
 
