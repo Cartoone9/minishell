@@ -46,9 +46,9 @@ The minishell project is covering a lot of ground, and the best way to check all
 
 <details>
   <summary><strong>Basic</strong></summary>
-  <p>Here you can see a basic <code>echo</code> command with a redirection to a file <code>output</code>.</p>
-  <img src="https://github.com/user-attachments/assets/df54efc1-0609-4753-a9d2-1e9185492a45" alt="minishell_basic" />
-  <p>Continuing, we can add quotes that will force a literal interpretation of the special characters like <code>|</code> or <code>&gt;</code>.</p>
+  <p>This example shows a basic <code>echo</code> command with a redirection to a file <code>output</code>.</p>
+<img src="https://github.com/user-attachments/assets/df54efc1-0609-4753-a9d2-1e9185492a45" alt="minishell_basic" />
+<p>Quoting forces a literal interpretation of special characters such as <code>|</code> or <code>&gt;</code>.</p>
   <img src="https://github.com/user-attachments/assets/5fce475a-d2ae-4047-b4a6-df76d0b2e97c" alt="minishell_double_quote" />
 </details>
 
@@ -73,18 +73,17 @@ The minishell project is covering a lot of ground, and the best way to check all
 
 <details>
   <summary><strong>Heredocs</strong></summary>
-  <p>Here we'll see the <code>heredocs</code>. You can combine the <code>heredocs</code> just like you could for the simple redirections previously seen.<br>
-  If a <code>pipe</code> is ending the command line, we start by resolving the <code>heredocs</code>, then the program will show the appropriate prompt for the remaining <code>pipe</code>.</p>
+  <p>This section demonstrates <code>heredoc</code> support. You can combine <code>heredocs</code> just as you can with simple redirections.<br>
+  If a <code>pipe</code> ends the command line, <code>heredocs</code> are resolved first, and then the program displays the appropriate prompt for the remaining <code>pipe</code>.</p>
   <img src="https://github.com/user-attachments/assets/ddd9b0c5-cc7f-404e-afb8-ba112def9266" alt="minishell_heredoc_pipe" />
 </details>
 
 <details>
   <summary><strong>Pipes</strong></summary>
-  <p>First we can see a simple command including <code>pipes</code>.</p>
+  <p>This example demonstrates a simple command using <code>pipes</code>.</p>
   <img src="https://github.com/user-attachments/assets/ebc7c9cb-6a78-465b-a41f-f7acaa22ed9a" alt="minishell_pipe_1" />
-
-  <p>Here we can see the behavior seen before with the <code>heredocs</code>. As long as the last command is ending with a <code>pipe</code>, a new prompt will open.<br>
-  Once a command not ending with a <code>pipe</code> is entered, the multiple commands are merged into a single one.</p>
+  <p>This example shows heredoc behavior with pipes. As long as the last command ends with a <code>pipe</code>, a new prompt will open.<br>
+Once a command does not end with a <code>pipe</code>, the multiple commands are merged into a single one.</p>
   <img src="https://github.com/user-attachments/assets/dcf19219-a10f-4e70-95eb-9868fce021dd" alt="minishell_pipe_end" />
 </details>
 
