@@ -56,11 +56,11 @@ In the following examples I will try to present most of the features supported, 
 The minishell project is covering a lot of ground, and the best way to check all of its features would be to use the program directly.  
 
 <details>
-<summary><strong>Basic</strong></summary>
-Here you can see a basic `echo` command with a redirection to a file `output`.  
-![minishell_basic](https://github.com/user-attachments/assets/df54efc1-0609-4753-a9d2-1e9185492a45)  
-Continuing, we can add quotes that will force a literal interpretation of the special characters like `|` or `>`.  
-![minishell_double_quote](https://github.com/user-attachments/assets/5fce475a-d2ae-4047-b4a6-df76d0b2e97c)  
+  <summary><strong>Basic</strong></summary>
+  <p>Here you can see a basic <code>echo</code> command with a redirection to a file <code>output</code>.</p>
+  <img src="https://github.com/user-attachments/assets/df54efc1-0609-4753-a9d2-1e9185492a45" alt="minishell_basic" />
+  <p>Continuing, we can add quotes that will force a literal interpretation of the special characters like <code>|</code> or <code>&gt;</code>.</p>
+  <img src="https://github.com/user-attachments/assets/5fce475a-d2ae-4047-b4a6-df76d0b2e97c" alt="minishell_double_quote" />
 </details>
 
 ### Empty:  
