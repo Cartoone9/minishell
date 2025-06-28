@@ -193,8 +193,9 @@ void	ft_wait_signals(void)
 ```
 ---
 
-Killing a program like vim from inside minishell can leave the terminal in a messy or unusable state (e.g., broken prompt, raw input mode). This happens because such programs modify the terminal's settings (termios), and when they’re killed abruptly, those settings aren’t reset properly.  
+Killing a program like vim from inside minishell can leave the terminal in a messy or unusable state (broken prompt). This happens because such programs modify the terminal's settings (`termios`), and when they’re killed abruptly, those settings aren’t reset properly.  
 ![bug_prompt_minishell](https://github.com/user-attachments/assets/d3a132d3-8b21-47ec-8088-24f3fccffa25)  
+
 This can be fixed by saving the current terminal attributes using `tcgetattr()` before launching the command, and restoring them afterward using `tcsetattr()`.  
 While this is a known edge case, it's quite niche for this project’s scope so I chose not to go further.  
 
