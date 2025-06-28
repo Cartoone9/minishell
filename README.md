@@ -4,13 +4,9 @@
 
 # minishell
 
- This is my Minishell project: a small Bash-like shell written in C as part of the 42 common core. It parses and executes user commands, handles pipes and redirections, and manages signals and child processes with proper system calls.  
-We had to rebuild key parts of a shell from scratch: quoting, environment variables, file descriptors, fork/exec logic, and more.  
-It was a deep dive into Unix internals and low-level system programming. Everything from process creation to memory management was handled manually, using a range of standard and POSIX libraries (such as `unistd.h`, `fcntl.h`, `signal.h`, and `readline.h`) to interact with the system. Overall, this project gave me a much clearer understanding of what a shell actually does under the hood.  
-
 ## Table of Contents
 
-- [About](#minishell)
+- [About](#about)
 - [Usage](#usage)
 - [Example](#example)
 - [Features](#features)
@@ -18,6 +14,12 @@ It was a deep dive into Unix internals and low-level system programming. Everyth
 - [Known Issues & Fix Suggestions](#known-issues--fix-suggestions)
 - [Credits](#credits)
 - [License](#license)
+
+## About
+
+This is my Minishell project: a small Bash-like shell written in C as part of the 42 common core. It parses and executes user commands, handles pipes and redirections, and manages signals and child processes with proper system calls.  
+We had to rebuild key parts of a shell from scratch: quoting, environment variables, file descriptors, fork/exec logic, and more.  
+It was a deep dive into Unix internals and low-level system programming. Everything from process creation to memory management was handled manually, using a range of standard and POSIX libraries (such as `unistd.h`, `fcntl.h`, `signal.h`, and `readline.h`) to interact with the system. Overall, this project gave me a much clearer understanding of what a shell actually does under the hood.  
 
 ## Usage
 
@@ -197,7 +199,7 @@ Killing a program like vim from inside minishell can leave the terminal in a mes
 ![bug_prompt_minishell](https://github.com/user-attachments/assets/d3a132d3-8b21-47ec-8088-24f3fccffa25)  
 
 This can be fixed by saving the current terminal attributes using `tcgetattr()` before launching the command, and restoring them afterward using `tcsetattr()`.  
-While this is a known edge case, it's quite niche for this project’s scope so I chose not to go further.  
+While this is a known edge case, it's quite niche for this project’s scope so I chose not to handle it further.  
 
 ## Credits
 
