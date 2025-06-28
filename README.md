@@ -160,8 +160,10 @@ All projects from my 42 cursus are preserved in their state immediately followin
 ## Known Issues & Fix Suggestions
 
 WIP:
-- Ctrl+C in a heredoc doesn't line return
-- Kill a vim session inside minishell, from another terminal will make the prompt messy
+- Ctrl+C in a heredoc doesn't line return  
+- ![bug_ctrlc_minishell](https://github.com/user-attachments/assets/d7ffa033-9af8-463e-9915-27a1d4027c55)
+
+- Killing a vim session inside minishell will make the prompt messy
 
 ## Credits
 
