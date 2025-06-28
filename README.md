@@ -131,6 +131,8 @@ Once a command does not end with a <code>pipe</code>, the multiple commands are 
 
 <details>
   <summary><strong>Errors</strong></summary>
+  <p>This is a simple example using an unknown command</p>
+<img src="https://github.com/user-attachments/assets/c6d458eb-bc80-4b0d-b54f-39337d3c15da" alt="minishell_unknown" />
   <p>Here I used the <code>ls</code> command to show the possible file errors and the ways the program is dealing with them.<br>
   As you can see, the correct error messages and returned values are used, even when using a redirection or not.</p>
   <img src="https://github.com/user-attachments/assets/f6ca1552-2c66-40fe-87d5-563120604dc8" alt="minishell_full_perm" />
