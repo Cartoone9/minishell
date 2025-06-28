@@ -109,9 +109,9 @@ Once a command does not end with a <code>pipe</code>, the multiple commands are 
   <p>If <code>HOME</code> is not set, the program will return an error.</p>
   <img src="https://github.com/user-attachments/assets/eda15c6f-8620-43df-9fe5-1c78c842c8a2" alt="minishell_cd_2" />
 
-  <p>You can export a variable <code>HOME</code> in order to change it.</p>
-  <img src="https://github.com/user-attachments/assets/4b7b83dc-6bcf-4c6d-ba7e-e1d929654b06" alt="minishell_cd_3" />
-  
+  <p>You can export a variable <code>HOME</code> in order to set it to the desired path.</p>
+  <img src="https://github.com/user-attachments/assets/d1c13870-78b3-44c6-8b30-48e4f3908ef9" alt="minishell_cd_3" />
+
   <p>Here we can see it fail on a locked directory, and a missing directory.</p>
   <img src="https://github.com/user-attachments/assets/9280b27f-18f5-4339-95c8-b151ccd8cbb3" alt="minishell_cd_4" />
 
