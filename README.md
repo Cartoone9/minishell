@@ -163,6 +163,37 @@ WIP:
 - Ctrl+C in a heredoc doesn't line return  
 ![bug_ctrlc_minishell](https://github.com/user-attachments/assets/d7ffa033-9af8-463e-9915-27a1d4027c55)
 
+One easy way to fix this would be to add this function `ft_handle_wait_signal()`:  
+```C
+void	ft_handle_wait_sigint(int signal)
+{
+	(void)signal;
+	g_signal = 3;
+	write(1, "\n", 1);
+	rl_replace_line("", 0);
+	rl_on_new_line();
+}
+```
+
+Then modify `ft_wait_signals()` to use it:  
+```diff
+void	ft_wait_signals(void)
+{
+	struct sigaction	sa;
+	struct sigaction	sa_quit;
+
+- sa.sa_handler = SIG_IGN;
++	sa.sa_handler = ft_handle_wait_sigint;
+	sigemptyset(&sa.sa_mask);
+	sa.sa_flags = 0;
+	sigaction(SIGINT, &sa, NULL);
+	sa_quit.sa_handler = SIG_IGN;
+	sigemptyset(&sa_quit.sa_mask);
+	sa_quit.sa_flags = 0;
+	sigaction(SIGQUIT, &sa_quit, NULL);
+}
+```
+
 - Killing a vim session inside minishell will make the prompt messy  
 ![bug_prompt_minishell](https://github.com/user-attachments/assets/d3a132d3-8b21-47ec-8088-24f3fccffa25)
 
