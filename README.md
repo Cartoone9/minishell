@@ -159,7 +159,7 @@ All projects from my 42 cursus are preserved in their state immediately followin
 
 ## Known Issues & Fix Suggestions
 
-- `Ctrl + C` in a `heredoc` doesn't return before a new prompt  
+`Ctrl + C` in a `heredoc` doesn't return before a new prompt  
 ![bug_ctrlc_minishell](https://github.com/user-attachments/assets/d7ffa033-9af8-463e-9915-27a1d4027c55)
 
 One easy way to fix this would be to add this function `ft_handle_wait_signal()`:  
@@ -193,12 +193,10 @@ void	ft_wait_signals(void)
 ```
 ---
 
-- Killing a vim session inside minishell will make the prompt messy  
-![bug_prompt_minishell](https://github.com/user-attachments/assets/d3a132d3-8b21-47ec-8088-24f3fccffa25)
-This could be fixed using the functions `tcgetattr()` and `tcsetatt()` before and after each command.
-These functions would allow to save and set the termios (terminal settings) and avoid the bug shown above.
-It is a very niche bug tho, so I won't go further by providing code to fix the issue.
-
+Killing a program like vim from inside minishell can leave the terminal in a messy or unusable state (e.g., broken prompt, raw input mode). This happens because such programs modify the terminal's settings (termios), and when they’re killed abruptly, those settings aren’t reset properly.  
+![bug_prompt_minishell](https://github.com/user-attachments/assets/d3a132d3-8b21-47ec-8088-24f3fccffa25)  
+This can be fixed by saving the current terminal attributes using `tcgetattr()` before launching the command, and restoring them afterward using `tcsetattr()`.  
+While this is a known edge case, it's quite niche for this project’s scope so I chose not to go further.  
 
 ## Credits
 
