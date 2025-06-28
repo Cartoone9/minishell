@@ -102,15 +102,24 @@ Once a command does not end with a <code>pipe</code>, the multiple commands are 
 
 <details>
   <summary><strong>Cd</strong></summary>
-  <p>The following examples will showcase the <code>cd</code> behavior.</p>
-  <img src="https://github.com/user-attachments/assets/8522052a-81f4-4ee9-af47-aa1e8a6f0335" alt="minishell_cd_1" />
+  <p>The following examples will showcase the <code>cd</code> behavior.<br>
+  If no argument is passed, <code>cd</code> will use <code>HOME</code> as long as it exists.</p>
+  <img src="https://github.com/user-attachments/assets/fb7160dc-0df1-4194-a148-dcc9aed5c389" alt="minishell_cd_1" />
 
+  <p>If <code>HOME</code> is not set, the program will return an error.</p>
+  <img src="https://github.com/user-attachments/assets/eda15c6f-8620-43df-9fe5-1c78c842c8a2" alt="minishell_cd_2" />
+
+  <p>You can export a variable <code>HOME</code> in order to change it.</p>
+  <img src="https://github.com/user-attachments/assets/4b7b83dc-6bcf-4c6d-ba7e-e1d929654b06" alt="minishell_cd_3" />
+  
   <p>Here we can see it fail on a locked directory, and a missing directory.</p>
-  <img src="https://github.com/user-attachments/assets/9280b27f-18f5-4339-95c8-b151ccd8cbb3" alt="minishell_cd_2" />
+  <img src="https://github.com/user-attachments/assets/9280b27f-18f5-4339-95c8-b151ccd8cbb3" alt="minishell_cd_4" />
 
   <p>The following image is showing the <code>cd</code> command used with <code>..</code> and <code>.</code> in accordance to the subject.<br>
   We use <code>pwd</code> to check that we are in the correct directory, even though the current working directory is updated directly in the prompt.</p>
-  <img src="https://github.com/user-attachments/assets/dea4832c-b444-4d11-820f-8e5cfec30227" alt="minishell_cd_dot_2" />
+  <img src="https://github.com/user-attachments/assets/dea4832c-b444-4d11-820f-8e5cfec30227" alt="minishell_cd_dot" />
+
+
 </details>
 
 <details>
